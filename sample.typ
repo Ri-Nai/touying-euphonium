@@ -1,5 +1,5 @@
 #import "@preview/touying:0.5.5": *
-#import "euphonium-theme.typ": *
+#import "touying-euphonium.typ": *
 
 #show: euphonium-theme.with(
   aspect-ratio: "16-9",
