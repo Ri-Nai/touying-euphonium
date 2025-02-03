@@ -448,12 +448,15 @@
         h(5em)
         set text(fill: self.colors.primary, size: 1.2em)
         if title == none { } else if title == auto {
-          utils.display-current-heading(level: 1)
-          utils.call-or-display(self, "  |  ")
-          if self.store.title != none {
-            utils.call-or-display(self, self.store.title)
-          } else {
-            utils.display-current-heading(level: 2)
+          context {
+            utils.display-current-heading(level: 1)
+            if self.store.title != none {
+              utils.call-or-display(self, "  |  ")
+              utils.call-or-display(self, self.store.title)
+            } else if utils.current-heading(level: 2) != none {
+              utils.call-or-display(self, "  |  ")
+              utils.display-current-heading(level: 2)
+            }
           }
         } else {
           title
