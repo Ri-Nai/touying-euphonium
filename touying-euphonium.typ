@@ -53,20 +53,31 @@
     std.align(
       align,
       components.adaptive-columns(
-        text(
-          fill: self.colors.primary-darkest,
-          size: 1em,
-          weight: "bold",
-          components.custom-progressive-outline(
-            level: level,
-            indent: (0em, 1em),
-            vspace: (1em,),
-            numbered: (numbered,),
-            text-size: (1.5em, 1.2em, 0.8em),
-            depth: depth,
-            ..args.named(),
-          ),
-        ),
+        underline(
+          stroke: 0.5em
+            + gradient.linear(
+              dir: ttb,
+              self.colors.primary-lighter.opacify(-60%),
+              self.colors.primary-lightest,
+            ),
+          evade: false,
+          // radius: 0.5em,
+          // offset: 0.5em,
+        )[
+          #text(
+            fill: self.colors.primary-darkest,
+            size: 1em,
+            weight: "bold",
+            components.custom-progressive-outline(
+              level: level,
+              indent: (0em, 1em),
+              vspace: (1em, 0.1em),
+              numbered: (numbered,),
+              text-size: (1.2em, 0.8em, 0.6em),
+              depth: depth,
+              ..args.named(),
+            ),
+          )],
       )
         + args.pos().sum(default: none),
     ),
