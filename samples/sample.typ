@@ -13,15 +13,16 @@
   ),
 )
 
+// 尽量不要使用 background-image，因为编译速度会变得非常慢
 
 // Title Slide
 #title-slide()
+// #title-slide(background-image: (path: "assets/bg.png", alpha: 50%))
 
 // Focus Slide
 #focus-slide()[Wake up!]
 // Focus Slide with Background Image
-// 尽量不要使用这个，因为会使编译非常慢
-#focus-slide(background-image: (path: "assets/bg.png", alpha: 50%))[Wake up!]
+// #focus-slide(background-image: (path: "assets/bg.png", alpha: 50%))[Wake up!]
 
 // Outline Slide
 #outline-slide()
@@ -31,7 +32,8 @@
 
 = 前言
 ---
-#slide(background-image: (path: "assets/bg.png", alpha: 20%))[
+// #slide(background-image: (path: "assets/bg.png", alpha: 20%))[
+#slide()[
 
   本文摘自 #link("https://hibikilogy.github.io/2019/03/27/Nozomi/")[希美传]，原作者为 #link("https://space.bilibili.com/22843")[舞红铃
 
