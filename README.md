@@ -11,6 +11,7 @@
 |---------|----------|
 | ![封面设计](./docs/imgs/cover.png) | ![粘性大纲](./docs/imgs/sticky-outlines.png) |
 | ![带背景的焦点页](./docs/imgs/focus-page-with-background.png) | ![简约焦点页](./docs/imgs/focus-page.png) |
+| ![目录页](./docs/imgs/contents.png) | ![正文页](./docs/imgs/body-page.png) |
 
 ## 🚀 快速使用
 
