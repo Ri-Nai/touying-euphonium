@@ -54,12 +54,7 @@
       align,
       components.adaptive-columns(
         underline(
-          stroke: 0.5em
-            + gradient.linear(
-              dir: ttb,
-              self.colors.primary-lighter.opacify(-60%),
-              self.colors.primary-lightest,
-            ),
+          stroke: 0.5em + self.colors.primary-lighter.opacify(-80%),
           evade: false,
           // radius: 0.5em,
           // offset: 0.5em,
