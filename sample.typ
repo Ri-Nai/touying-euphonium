@@ -9,8 +9,7 @@
     institution: [Kitauji High School],
     author: [Kanade Hisaishi],
     authors: ([Kanade Hisaishi], [Reina Kousaka]),
-    description: [This theme is inspired by the anime Hibike! Euphonium.],
-    date: datetime(year: 2015, month: 4, day: 8),
+    date: datetime(year: 2019, month: 3, day: 27),
   ),
 )
 
