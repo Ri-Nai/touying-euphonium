@@ -45,7 +45,7 @@
 
 #title-slide()
 
-#outline-slide()
+// #outline-slide()
 
 #sticky-custom-outlines(text-size: (1.2em, 0.7em, 0.6em))
 
