@@ -451,7 +451,7 @@
         set align(horizon)
         set align(left)
         h(5em)
-        set text(fill: self.colors.primary, size: 1.5em)
+        set text(fill: self.colors.primary, size: 1.2em)
         if title == none { } else if title == auto {
           utils.display-current-heading(level: 1)
           utils.call-or-display(self, "  |  ")
