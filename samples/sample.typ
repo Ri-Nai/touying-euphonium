@@ -20,6 +20,7 @@
 // Focus Slide
 #focus-slide()[Wake up!]
 // Focus Slide with Background Image
+// 尽量不要使用这个，因为会使编译非常慢
 #focus-slide(background-image: (path: "assets/bg.png", alpha: 50%))[Wake up!]
 
 // Outline Slide
