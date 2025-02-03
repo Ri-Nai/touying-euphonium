@@ -219,10 +219,10 @@
     }
   }
   let body = {
-    show: std.align.with(center + horizon)
+    show: std.align.with(center)
     box(
       // fill: self.colors.primary-lightest,
-      inset: 1.5em,
+      inset: (bottom: 1em),
       radius: 0.5em,
       {
         // let title-color = rgb("#F7FC0D")
@@ -261,18 +261,18 @@
       columns: (1fr,) * calc.min(info.authors.len(), 3),
       column-gutter: 1em,
       row-gutter: 1em,
-      ..info.authors.map(author => text(author)),
+      ..info.authors.map(author => text(1.2em, author)),
     )
     v(0.5em)
     // institution
     if info.institution != none {
       parbreak()
-      text(size: 0.7em, info.institution)
+      text(size: 1.2em, info.institution)
     }
     // date
     if info.date != none {
       parbreak()
-      text(size: 1.0em, utils.display-info-date(self))
+      text(size: 1.0em, info.date.display("[year] 年 [month] 月 [day] 日"))
     }
   }
   touying-slide(self: self, body)
@@ -464,7 +464,7 @@
         h(1fr)
         self.info.title
         h(1fr)
-        self.info.date.display()
+        self.info.date.display("[year] 年 [month] 月 [day] 日")
         h(1fr)
         set text(fill: self.colors.neutral-lightest)
         context utils.slide-counter.display() + " / " + utils.last-slide-number
