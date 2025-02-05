@@ -8,10 +8,10 @@
 ## 📸 主题截图
 
 | 功能演示 | 页面效果 |
-|---------|----------|
-| ![封面设计](./docs/imgs/cover.png) | ![粘性大纲](./docs/imgs/sticky-outlines.png) |
-| ![带背景的焦点页](./docs/imgs/focus-page-with-background.png) | ![简约焦点页](./docs/imgs/focus-page.png) |
-| ![目录页](./docs/imgs/contents.png) | ![正文页](./docs/imgs/body-page.png) |
+|:---------:|:----------:|
+| ![封面设计](./docs/imgs/cover.png) 封面设计 | ![便笺大纲](./docs/imgs/sticky-outlines.png) 便笺大纲 |
+| ![带背景的焦点页](./docs/imgs/focus-page-with-background.png) 带背景的焦点页 | ![简约焦点页](./docs/imgs/focus-page.png) 简约焦点页 |
+| ![目录页](./docs/imgs/contents.png) 目录页 | ![正文页](./docs/imgs/body-page.png) 正文页 |
 
 ## 🚀 快速使用
 
