@@ -264,7 +264,7 @@
       image("assets/header.png", height: 4em),
     )
     grid(
-      columns: (1fr,) * calc.min(info.authors.len(), 3),
+      columns: (1fr,) * calc.min(info.authors.len(), 4),
       column-gutter: 1em,
       row-gutter: 1em,
       ..info.authors.map(author => text(1.2em, author)),
@@ -388,7 +388,7 @@
 #let euphonium-theme(
   aspect-ratio: "16-9",
   font-size: 20pt,
-  font: ("Noto Serif SC", "Times New Roman", "SimSun"),
+  font: ("LXGW WenKai", "Noto Serif CJK SC", "Noto Serif SC", "Times New Roman", "SimSun"),
   ..args,
   body,
 ) = {
@@ -469,7 +469,11 @@
 
         self.info.institution
         h(1fr)
-        self.info.author
+        if self.info.authors != none {
+          self.info.authors.join(", ")
+        } else {
+          self.info.author
+        }
         h(1fr)
         self.info.title
         h(1fr)
