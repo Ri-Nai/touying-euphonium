@@ -1,6 +1,12 @@
 #import "@preview/touying:0.5.5": *
 #import "@preview/grayness:0.2.0": *
 
+#let _underline-highlight(self: none, it) = underline(
+  stroke: 0.5em + self.colors.primary-lighter.opacify(-80%),
+  evade: false,
+  it,
+)
+
 #let _tblock(self: none, title: none, it) = {
   grid(
     columns: 1,
@@ -29,6 +35,7 @@
   )
 }
 #let tblock(title: none, it) = touying-fn-wrapper(_tblock.with(title: title, it))
+#let underline-highlight(it) = touying-fn-wrapper(_underline-highlight.with(it))
 
 #let outline-slide(
   config: (:),
@@ -53,12 +60,7 @@
     std.align(
       align,
       components.adaptive-columns(
-        underline(
-          stroke: 0.5em + self.colors.primary-lighter.opacify(-80%),
-          evade: false,
-          // radius: 0.5em,
-          // offset: 0.5em,
-        )[
+        _underline-highlight(self: self)[
           #text(
             fill: self.colors.primary-darkest,
             size: 1em,
@@ -447,7 +449,7 @@
         set align(left)
         h(5em)
         set text(fill: self.colors.primary, size: 1.2em)
-        if title == none { } else if title == auto {
+        if title == none {} else if title == auto {
           context {
             utils.display-current-heading(level: 1)
             if self.store.title != none {
